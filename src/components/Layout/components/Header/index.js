@@ -16,17 +16,17 @@ function Header() {
                 </div>
                 <div className={cx('search')}>
                     <input placeholder="Search accounts and videos" spellCheck="false"/>
-                    <button className={cx('clear-icon')}>
-                         <FontAwesomeIcon icon={faCircleXmark}/>
+                    {/* <button className={cx('clear')}> */}
+                         {/* <FontAwesomeIcon icon={faCircleXmark}/> */}
 
-                    </button>
+                    {/* </button> */}
                         <FontAwesomeIcon className={cx('loading')} icon={faSpinner}/>
                     <button className={cx('search-btn')}>
                         <FontAwesomeIcon icon={faMagnifyingGlass}/>
                     </button>
                 </div>
                 <div className={cx('action')}>
-                    
+
                 </div>
             </div>
         </header>
