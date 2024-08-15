@@ -14,6 +14,6 @@ function DefaultLayout({ children }) {
                 <div className={cx('content')}>{children}</div>
             </div>
         </div>
-        
     );
 }
+export default DefaultLayout;

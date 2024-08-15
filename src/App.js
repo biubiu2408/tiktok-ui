@@ -3,14 +3,16 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from '~/routes';
 import { DefaultLayout } from '~/components/Layout';
 
-export default function App() {
+function App() {
     return (
+
         <Router>
             <div className="App">
                 <Routes>
                     {publicRoutes.map((route, index) => {
                         const Page = route.component;
                         let Layout = DefaultLayout;
+
                         if (route.layout) {
                             Layout = route.layout;
                         } else if (route.layout === null) {
@@ -26,7 +28,7 @@ export default function App() {
                                         <Page />
                                     </Layout>
                                 }
-                            /> 
+                            />
                         );
                     })}
                 </Routes>
@@ -34,3 +36,5 @@ export default function App() {
         </Router>
     );
 }
+
+export default App;
