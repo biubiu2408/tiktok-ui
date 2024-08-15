@@ -20,12 +20,19 @@
     
 }
 .logo{
-   
+   padding: 8px 16px;
+   display: flex;
+   justify-content: center;
 }
+
+.search,.search-result {
+    width: 361px;
+
+}
+
 .search{
     position: relative;
     display: flex;  
-    width: 361px;
     height: var(--search-height);
     padding-left: 16px;
     background-color: rgba(22, 24, 35, 0.06);
@@ -61,6 +68,13 @@
     &:focus-within{
         border-color: rgba(22,24,35,0.05);
     }
+}
+
+.search-title{
+    padding: 9px 12px;
+    color: rgba(22, 24, 35, 0.5);
+    font-size: 1rem;
+    width: 600px;
 }
 .clear,
 .loading{
