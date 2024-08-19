@@ -8,6 +8,7 @@ import images from '~/assets/images';
 import { Wrapper as PopperWrapper } from '../Popper';
 import { useEffect, useState } from 'react';
 import AccountItem from '~/components/AccountItem';
+import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 
@@ -55,7 +56,8 @@ function Header() {
                     </div>
                 </Tippy>
                 <div className={cx('action')}>
-
+                        <Button upload>Upload</Button>
+                        <Button primary >Log In</Button>
                 </div>
             </div>
         </header>
