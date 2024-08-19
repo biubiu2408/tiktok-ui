@@ -1,0 +1,43 @@
+.wrapper{
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 6px 16px;
+    min-width: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--white);
+    border: 1px solid transparent;
+
+    + .wrapper {
+        margin-left:  8px;
+    }
+}
+//Button types
+.primary{
+    color: var(--white) !important;
+    background-color: var(--primary);
+
+    &:hover{
+        background: linear-gradient(0deg, rgba(0,0,0,0.06)), #fe2c55;
+    }
+}
+.upload{
+    font-size: 0.8rem;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.outline {
+    color:var(--primary) !important;
+    border-color: currentColor;
+
+    &:hover{
+        background-color: rgba(184, 19, 52, 0.1);
+    }
+
+.small{
+    min-width: 88px;
+    padding : 4px 16px;
+}
+}
