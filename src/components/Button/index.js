@@ -13,8 +13,13 @@ function Button({
     upload = false,
     small = false,
     large = false,
+    rounded = false,
+    leftIcon,
+    rightIcon,
+    disabled,
+    children,
+    className, 
     onClick,
-    children, 
     ...passProps
 }) {
     let Comp = 'button';
@@ -23,6 +28,14 @@ function Button({
         onClick,
         ...passProps,
     };
+
+    if(disabled) {
+        Object.keys(props).forEach((key) => {
+            if(key.startsWith('on') && typeof props[key] === 'function'){
+                delete props[key];
+            }
+        });
+    }
     if (to) {
         props.to = to;
         Comp = Link;
@@ -32,14 +45,20 @@ function Button({
     }
 
     const classes = cx('wrapper', {
+        [className]: className,
         outline,
         primary,
         upload,
+        rounded,
         small,
+        large,
+        disabled,
     });
     return (
         <Comp className={classes} {...props}>
-            <span>{children}</span>
+            {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
+            <span className={cx('title')}>{children}</span>
+            {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
         </Comp>
     );
 }
